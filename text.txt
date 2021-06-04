@@ -1,0 +1,59 @@
+
+/**
+* Ejs serve para renderizar os códigos html
+* View engine para fazer if echo dentro do html
+* Um arquivo ejs seria uma junção de html com javascript
+*/
+
+
+
+1º criar uma pasta dentro do diretório
+src
+
+1.1: criar e colocar dentro da pasta src a pasta:
+controllers
+
+1.2: criar uma pasta:
+views
+
+2º ir em server.js
+2.1: passar o caminho absoluto das views
+app.set('views', path(__dirname, 'src', 'views') );
+
+3º Criar arquivos fora do src
+public
+
+3.1: public 
+
+
+=============================FINALIZAR O PROCESSO=============================
+pkill node
+
+================================================================================================
+Não podemos acessar nosso servidor web via usuário e senha(BLOQUEADO)
+nós acessamos ele através de chaves
+SSH, daí precisamos ter uma chave pública e privada no seu computador, e colocar esta chave pública
+dentro do servidor, vai casar estas duas chaves, aqui está dentro do computador com a chave que
+está no servidor se bater não vai precisar logar com usuário e senha nem nada, vai conseguir logar
+só com a chave mesmo.
+
+Passos para fazer uma chave SSH
+
+1º Passo: abrir o terminal
+1.1: digitar(caminho/nome da chave)
+ssh-keygen -f ~/.ssh/cursojs -t rsa -b 4096 ENTER
+
+2º Passo: listar
+ls ~/.ssh/curso*
+
+3º Passo: pegar o que tem dentro
+cat /home/cesardeveloper/.ssh/cursojs.pub
+
+4º Passo: colar a chave dentro do servidor(texto enorme que aparece depois do comando acima)
+4.1 Vai em metadados e adiciona a chave
+
+-> com as chaves ssh conseguimos acessar o servidor online
+
+5º Passo: acessar o servidor online
+ssh nome do usuario(cesardeveloper@) ip 35.198.63.80
+
